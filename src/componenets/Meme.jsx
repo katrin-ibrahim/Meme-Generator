@@ -8,6 +8,9 @@ export default function Meme() {
         bottomText:"",
         randomImage:"https://i.imgflip.com/39t1o.jpg"
     })
+
+  
+    
     const [allMemeImages,setAllMemeImages] = useState(memesData)
     
   
@@ -23,29 +26,49 @@ export default function Meme() {
             ...prevMeme,
             randomImage: url
         }))
-        console.log("hahhah")
+     
 
     }
+
+
+    function handleChange(event) {
+        const {name, value} = event.target
+        setMeme(prevMeme => ({
+            ...prevMeme,
+            [name]: value
+        }))
+    }
+
   return (
    <main>
-     <img 
-        src={meme.randomImage}
-        className="meme-image"
-    />
+     <div className='meme'>
+         <img
+            src={meme.randomImage}
+            className="meme-image"
+             />
+             <h2 className="meme-text top">{meme.topText}</h2>
+                <h2 className="meme-text bottom">{meme.bottomText}</h2>
+     </div>
 
-
-     
         <div className='form'>
         <span className='intro-text'><strong>Welcome to Meme Generator!</strong><br/>Click "Generate a new  meme image !” to get a new random meme , then customize it with any text you like!</span>
             <input
                 type="text"
                 className='form-input'
                 placeholder='Top text'
+                name="topText"
+                value={meme.topText}
+                onChange={handleChange}
+          
              />
             <input
                 type="text"
                 className='form-input'
                 placeholder='Bottom text'
+                name="bottomText"
+                value={meme.bottomText}
+                onChange={handleChange}
+                
             />
       
             <button

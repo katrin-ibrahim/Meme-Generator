@@ -8,13 +8,7 @@ body {
   width:100%;
 }
 
-main{
-  padding: 40px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  width:100%;
-}
+
 
 
 
@@ -42,7 +36,13 @@ main{
   font-weight: 500;
   
 }
-
+main{
+  padding: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width:100%;
+}
 .form{
   width:100%;
   display:flex;
@@ -78,10 +78,49 @@ main{
   padding: 10px;
 }
 
+.meme{
+  width: 55%;
+  margin-right:30px;
+  position: relative;
+  height: fit-content;
+}
+
 .meme-image{
   
-  width: 55%;
+  width:100%;
   border-radius: 5px;
   object-fit: cover;
-  margin-right:30px;
+}
+
+.meme-text {
+  position: absolute;
+  width: 80%;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 15px 0;
+  padding: 0 5px;
+  font-family: impact, sans-serif;
+  font-size: 3vw;
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 1px;
+  text-shadow:
+      2px 2px 0 #000,
+      -2px -2px 0 #000,
+      2px -2px 0 #000,
+      -2px 2px 0 #000,
+      0 2px 0 #000,
+      2px 0 0 #000,
+      0 -2px 0 #000,
+      -2px 0 0 #000,
+      2px 2px 5px #000;
+}
+
+.bottom {
+  bottom: -1%;
+}
+
+.top {
+  top: 1%;
 }
