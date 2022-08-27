@@ -45,7 +45,5 @@ Start the server
 
 
 ## To-do
-
-- add search feature
 - add download feature
 - add upload local images
